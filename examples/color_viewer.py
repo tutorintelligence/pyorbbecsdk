@@ -20,7 +20,7 @@ from pyorbbecsdk.bindings.pyorbbecsdk import OBError
 from pyorbbecsdk.bindings.pyorbbecsdk import VideoStreamProfile
 import cv2
 import numpy as np
-from utils import frame_to_bgr_image
+from pyorbbecsdk.utils import frame_to_bgr_image
 
 ESC_KEY = 27
 
