@@ -786,4 +786,4 @@ FodyWeavers.xsd
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,visualstudiocode,c++,python,jetbrains+all,ros,ros2
 
-pyorbbecsdk/bindings/*
+# pyorbbecsdk/bindings/*
