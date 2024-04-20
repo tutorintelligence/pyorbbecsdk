@@ -110,4 +110,4 @@ global = ["pybind11-global (==2.12.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "917da32ec455c1c90405de7ba91a7b76cdfc07f60db111cf6d3f596ad214174f"
+content-hash = "fafaacc761cf6fa0136af9b391bf8a0ff44c6ec20afa1a5b293068e3be48d8cc"
