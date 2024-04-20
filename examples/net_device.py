@@ -4,7 +4,7 @@ from pyorbbecsdk.bindings.pyorbbecsdk import (Pipeline, FrameSet, Context, Confi
                          OBFormat, OBError, VideoStreamProfile)
 import platform
 import subprocess
-from utils import frame_to_bgr_image
+from pyorbbecsdk.utils import frame_to_bgr_image
 
 ESC_KEY = 27
 

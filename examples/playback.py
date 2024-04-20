@@ -16,7 +16,7 @@
 import sys
 
 from pyorbbecsdk.bindings.pyorbbecsdk import *
-from utils import frame_to_bgr_image
+from pyorbbecsdk.utils import frame_to_bgr_image
 import cv2
 import numpy as np
 import signal

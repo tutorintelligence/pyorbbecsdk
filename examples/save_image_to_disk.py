@@ -16,7 +16,7 @@
 from pyorbbecsdk.bindings.pyorbbecsdk import *
 import cv2
 import numpy as np
-from utils import frame_to_bgr_image
+from pyorbbecsdk.utils import frame_to_bgr_image
 import os
 
 

@@ -18,7 +18,7 @@ import cv2
 import numpy as np
 from typing import List
 from queue import Queue
-from utils import frame_to_bgr_image
+from pyorbbecsdk.utils import frame_to_bgr_image
 import json
 import os
 

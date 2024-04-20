@@ -19,7 +19,7 @@ def build_cmake():
     target_dir.mkdir(parents=True, exist_ok=True)
     
     # Copy the .pyi stub files to the target dir
-    stub_file = Path(__file__).parent / 'stubs' / 'pyorbbecsdk.pyi'
+    stub_file = Path(__file__).parent / 'stubs' / 'original_pyorbbecsdk.pyi'
     target_file = target_dir / 'pyorbbecsdk.pyi'
     shutil.copy(stub_file, target_file)
     
