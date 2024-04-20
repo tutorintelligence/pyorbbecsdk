@@ -22,6 +22,10 @@ def build_cmake():
     stub_file = Path(__file__).parent / 'stubs' / 'pyorbbecsdk.pyi'
     target_file = target_dir / 'pyorbbecsdk.pyi'
     shutil.copy(stub_file, target_file)
+    
+    # Make __init__.py
+    init_file = target_dir / '__init__.py'
+    init_file.touch() 
         
     # Run CMake
     pybind11_dir = subprocess.check_output(
