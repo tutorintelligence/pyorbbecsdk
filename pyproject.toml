@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pyorbbecsdk"
+version = "0.1.0"
+description = ""
+authors = []
+license = "Apache 2.0"
+readme = "README.md"
+packages = [
+    { include = "pyorbbecsdk" }
+]
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pybind11 = "^2.12.0"
+numpy = "^1.26.4"
+opencv-contrib-python = "^4.9.0.80"
+opencv-python = "^4.9.0.80"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+build_cmake = "build_extensions:build_cmake"

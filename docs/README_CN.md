@@ -204,7 +204,7 @@ python3 examples/depth_viewer.py
 首先我们需要创建一个Pipeline，通过Pipeline可以很容易的打开和关闭多种类型的流并获取一组帧数据。
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 config = Config()
 pipeline = Pipeline()
@@ -240,7 +240,7 @@ pipeline.stop()
 ### 获取设备列表
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 self.context = Context()
 device_list = self.context.query_devices()
@@ -250,7 +250,7 @@ device_list = self.context.query_devices()
 ### 获取传感器列表
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device = device_list[0]
@@ -260,7 +260,7 @@ sensor_list = device.get_sensor_list()
 ### 获取设备信息
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device_info = self.device.get_device_info()
@@ -273,7 +273,7 @@ serial_number = device_info.get_serial_number()
 ### 彩色相机自动曝光
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 auto_exposure = True
@@ -283,7 +283,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_COLOR_AUTO_EXPOSURE_BOOL, auto_exp
 ### 获取和设置彩色相机曝光值
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device.set_bool_property(OBPropertyID.OB_PROP_COLOR_AUTO_EXPOSURE_BOOL, False)
@@ -296,7 +296,7 @@ device.set_int_property(OBPropertyID.OB_PROP_COLOR_EXPOSURE_INT, color_exposure)
 ### 获取和设置彩色相机增益
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device.set_bool_property(OBPropertyID.OB_PROP_COLOR_AUTO_EXPOSURE_BOOL, False)
@@ -309,7 +309,7 @@ device.set_int_property(OBPropertyID.OB_PROP_COLOR_GAIN_INT, color_gain)
 ### 彩色相机数据流镜像
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 mirror = True
@@ -320,7 +320,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_COLOR_MIRROR_BOOL, mirror)
 ### 开关激光
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 laser = True
@@ -331,7 +331,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_LASER_BOOL, laser)
 ### 开关LDP
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 ldp = True
@@ -342,7 +342,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_LDP_BOOL, ldp)
 ### 开关软件滤波
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 soft_filter = True
@@ -353,7 +353,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_DEPTH_SOFT_FILTER_BOOL, soft_filte
 ### 重启设备
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device.reboot()

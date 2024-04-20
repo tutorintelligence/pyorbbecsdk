@@ -13,11 +13,11 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 # ******************************************************************************
-from pyorbbecsdk import Pipeline, FrameSet
-from pyorbbecsdk import Config
-from pyorbbecsdk import OBSensorType, OBFormat
-from pyorbbecsdk import OBError
-from pyorbbecsdk import VideoStreamProfile
+from pyorbbecsdk.bindings.pyorbbecsdk import Pipeline, FrameSet
+from pyorbbecsdk.bindings.pyorbbecsdk import Config
+from pyorbbecsdk.bindings.pyorbbecsdk import OBSensorType, OBFormat
+from pyorbbecsdk.bindings.pyorbbecsdk import OBError
+from pyorbbecsdk.bindings.pyorbbecsdk import VideoStreamProfile
 import cv2
 import numpy as np
 from utils import frame_to_bgr_image

@@ -1,5 +1,5 @@
 import unittest
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 
 def on_device_connected_callback(_: DeviceList):

@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from pyorbbecsdk import (Pipeline, FrameSet, Context, Config, OBSensorType,
+from pyorbbecsdk.bindings.pyorbbecsdk import (Pipeline, FrameSet, Context, Config, OBSensorType,
                          OBFormat, OBError, VideoStreamProfile)
 import platform
 import subprocess

@@ -14,7 +14,7 @@
 #  limitations under the License.
 # ******************************************************************************
 
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 import time
 from threading import Lock
 import csv

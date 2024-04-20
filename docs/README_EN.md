@@ -212,7 +212,7 @@ First we need to create a Pipeline, which makes it easy to open and close multip
 frames.
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 config = Config()
 pipeline = Pipeline()
@@ -252,7 +252,7 @@ pipeline.stop()
 #### Getting a list of devices
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 self.context = Context()
 device_list = self.context.query_devices()
@@ -262,7 +262,7 @@ device_list = self.context.query_devices()
 #### Getting a list of sensors
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device = device_list[0]
@@ -272,7 +272,7 @@ sensor_list = device.get_sensor_list()
 #### Getting device information
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device_info = device.get_device_info()
@@ -285,7 +285,7 @@ serial_number = device_info.get_serial_number()
 #### Set color  auto-exposure
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 auto_exposure = True
@@ -295,7 +295,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_COLOR_AUTO_EXPOSURE_BOOL, auto_exp
 #### Getting and setting colour camera exposure values
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device.set_bool_property(OBPropertyID.OB_PROP_COLOR_AUTO_EXPOSURE_BOOL, False)
@@ -308,7 +308,7 @@ device.set_int_property(OBPropertyID.OB_PROP_COLOR_EXPOSURE_INT, color_exposure)
 #### Getting and setting the colour camera gain
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device.set_bool_property(OBPropertyID.OB_PROP_COLOR_AUTO_EXPOSURE_BOOL, False)
@@ -321,7 +321,7 @@ device.set_int_property(OBPropertyID.OB_PROP_COLOR_GAIN_INT, color_gain)
 #### Mirroring the colour camera data stream
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 mirror = True
@@ -332,7 +332,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_COLOR_MIRROR_BOOL, mirror)
 #### Switching laser
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 laser = True
@@ -343,7 +343,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_LASER_BOOL, laser)
 #### Switching LDP
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 ldp = True
@@ -354,7 +354,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_LDP_BOOL, ldp)
 #### Switch software filtering
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 soft_filter = True
@@ -365,7 +365,7 @@ device.set_bool_property(OBPropertyID.OB_PROP_DEPTH_SOFT_FILTER_BOOL, soft_filte
 ### Reboot device
 
 ```python
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 # ...
 device.reboot()

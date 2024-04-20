@@ -8,9 +8,12 @@ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}  -fPIC -g")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -O3")
 set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -fPIC -g")
 set(CMAKE_BUILD_TYPE "Release")
-set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/install)
+
+set(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/pyorbbecsdk)
+# set(CMAKE_INSTALL_PREFIX ${PYTHON_SITE_PACKAGES_DIR})
+
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
-set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/bindings")
 set(BUILD_TESTING ON CACHE BOOL "Build tests" FORCE)
 
 if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -37,19 +40,19 @@ find_package(pybind11 REQUIRED)
 link_directories(${ORBBEC_LIBS})
 
 pybind11_add_module(${PROJECT_NAME}
-  src/pyorbbecsdk/pyorbbecsdk.cpp
-  src/pyorbbecsdk/context.cpp
-  src/pyorbbecsdk/device.cpp
-  src/pyorbbecsdk/error.cpp
-  src/pyorbbecsdk/filter.cpp
-  src/pyorbbecsdk/frame.cpp
-  src/pyorbbecsdk/pipeline.cpp
-  src/pyorbbecsdk/properties.cpp
-  src/pyorbbecsdk/record_playback.cpp
-  src/pyorbbecsdk/sensor.cpp
-  src/pyorbbecsdk/stream_profile.cpp
-  src/pyorbbecsdk/types.cpp
-  src/pyorbbecsdk/utils.cpp
+  pyorbbecsdk/src/pyorbbecsdk.cpp
+  pyorbbecsdk/src/context.cpp
+  pyorbbecsdk/src/device.cpp
+  pyorbbecsdk/src/error.cpp
+  pyorbbecsdk/src/filter.cpp
+  pyorbbecsdk/src/frame.cpp
+  pyorbbecsdk/src/pipeline.cpp
+  pyorbbecsdk/src/properties.cpp
+  pyorbbecsdk/src/record_playback.cpp
+  pyorbbecsdk/src/sensor.cpp
+  pyorbbecsdk/src/stream_profile.cpp
+  pyorbbecsdk/src/types.cpp
+  pyorbbecsdk/src/utils.cpp
   )
 
 if (CMAKE_C_COMPILER_ID MATCHES "Clang" AND NOT APPLE)
@@ -58,7 +61,7 @@ endif ()
 
 target_include_directories(${PROJECT_NAME} PRIVATE
   ${ORBBEC_INCLUDE_DIR}
-  src/pyorbbecsdk/
+  pyorbbecsdk/src/
   )
 
 if (UNIX)
@@ -92,22 +95,22 @@ if (BUILD_TESTING)
 endif ()
 
 install(TARGETS ${PROJECT_NAME}
-  LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
-  RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+  LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/bindings
+  RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bindings)
 if(APPLE)
   install(DIRECTORY ${ORBBEC_LIBS}/
-    DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/bindings
     FILES_MATCHING PATTERN "*.dylib"
     )
 elseif (UNIX)
   install(DIRECTORY ${ORBBEC_LIBS}/
-    DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/bindings
     FILES_MATCHING PATTERN "*.so"
     PATTERN "*.so.*"
     )
 elseif (WIN32)
   install(DIRECTORY ${ORBBEC_LIBS}/
-    DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+    DESTINATION ${CMAKE_INSTALL_PREFIX}/bindings
     FILES_MATCHING PATTERN "*.lib"
     PATTERN "*.dll"
     )

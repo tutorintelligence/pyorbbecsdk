@@ -15,7 +15,7 @@
 #  limitations under the License.
 # ******************************************************************************
 
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 import open3d as o3d
 import numpy as np
 import os

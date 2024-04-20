@@ -1,5 +1,5 @@
 import unittest
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 
 
 class PipelineTest(unittest.TestCase):

@@ -13,7 +13,7 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 # ******************************************************************************
-from pyorbbecsdk import *
+from pyorbbecsdk.bindings.pyorbbecsdk import *
 import cv2
 
 ESC = 27

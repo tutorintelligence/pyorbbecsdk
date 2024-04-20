@@ -1,4 +1,4 @@
-from pyorbbecsdk import Pipeline
+from pyorbbecsdk.bindings.pyorbbecsdk import Pipeline
 # ******************************************************************************
 #  Copyright (c) 2023 Orbbec 3D Technology, Inc
 #  
@@ -14,9 +14,9 @@ from pyorbbecsdk import Pipeline
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 # ******************************************************************************
-from pyorbbecsdk import Config
-from pyorbbecsdk import OBSensorType, OBFormat
-from pyorbbecsdk import OBError
+from pyorbbecsdk.bindings.pyorbbecsdk import Config
+from pyorbbecsdk.bindings.pyorbbecsdk import OBSensorType, OBFormat
+from pyorbbecsdk.bindings.pyorbbecsdk import OBError
 import cv2
 import numpy as np
 

@@ -15,8 +15,8 @@
 # ******************************************************************************
 from typing import Union, Any, Optional
 
-from pyorbbecsdk import FormatConvertFilter, VideoFrame
-from pyorbbecsdk import OBFormat, OBConvertFormat
+from pyorbbecsdk.bindings.pyorbbecsdk import FormatConvertFilter, VideoFrame
+from pyorbbecsdk.bindings.pyorbbecsdk import OBFormat, OBConvertFormat
 import cv2
 import numpy as np
 

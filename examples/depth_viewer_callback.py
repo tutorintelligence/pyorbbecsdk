@@ -13,9 +13,9 @@
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 # ******************************************************************************
-from pyorbbecsdk import Pipeline, FrameSet
-from pyorbbecsdk import Config
-from pyorbbecsdk import OBSensorType
+from pyorbbecsdk.bindings.pyorbbecsdk import Pipeline, FrameSet
+from pyorbbecsdk.bindings.pyorbbecsdk import Config
+from pyorbbecsdk.bindings.pyorbbecsdk import OBSensorType
 import cv2
 import numpy as np
 from queue import Queue
